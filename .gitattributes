@@ -1,0 +1,2 @@
+events* filter=lfs diff=lfs merge=lfs -text
+session* filter=lfs diff=lfs merge=lfs -text
