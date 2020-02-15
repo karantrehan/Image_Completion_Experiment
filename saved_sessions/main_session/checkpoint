@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/modernsage/Image_Completion_experiment/saved_sessions/main_session/session"
+all_model_checkpoint_paths: "/home/modernsage/Image_Completion_experiment/saved_sessions/main_session/session"
