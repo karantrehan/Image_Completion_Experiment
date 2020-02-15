@@ -11,6 +11,19 @@ The research paper can be found at the below location.
 ______________________________________
 
 
+## Demo
+
+Please go the link mentioned below for demo web service.
+
+
+<http://inpaint.online>
+
+######
+Source Code for this web service can be found at below mentioned link.
+
+<https://github.com/karantrehan/Image_Completion_Web_Service>
+
+
 ## Summary
 
 In this research paper authors have tried to solve the challenging problem of image completion using surrounding pixel values, also known as InPainting.
@@ -93,14 +106,14 @@ ______________________________________
 
 Patched | Completed | Patched | Completed | Patched | Completed
 :-------------------------:|:-------------------------:|:------------------------:|:------------------------|:------------------------:|:------------------------
-![image_0_original_to_be_patched.jpg](results/train/main_session/image_0_original_to_be_patched.jpg)|![image_0_both_gen_dis.jpg](results/train/main_session/image_0_both_gen_dis.jpg)|![image_1_original_to_be_patched.jpg](results/train/main_session/image_1_original_to_be_patched.jpg)|![image_1_both_gen_dis.jpg](results/train/main_session/image_1_both_gen_dis.jpg)|![image_2_original_to_be_patched.jpg](results/train/main_session/image_2_original_to_be_patched.jpg)|![image_2_both_gen_dis.jpg](results/train/main_session/image_2_both_gen_dis.jpg)
-![image_3_original_to_be_patched.jpg](results/train/main_session/image_3_original_to_be_patched.jpg)|![image_3_both_gen_dis.jpg](results/train/main_session/image_3_both_gen_dis.jpg)|![image_4_original_to_be_patched.jpg](results/train/main_session/image_4_original_to_be_patched.jpg)|![image_4_both_gen_dis.jpg](results/train/main_session/image_4_both_gen_dis.jpg)|![image_5_original_to_be_patched.jpg](results/train/main_session/image_5_original_to_be_patched.jpg)|![image_5_both_gen_dis.jpg](results/train/main_session/image_5_both_gen_dis.jpg)
-![image_6_original_to_be_patched.jpg](results/train/main_session/image_6_original_to_be_patched.jpg)|![image_6_both_gen_dis.jpg](results/train/main_session/image_6_both_gen_dis.jpg)|![image_7_original_to_be_patched.jpg](results/train/main_session/image_7_original_to_be_patched.jpg)|![image_7_both_gen_dis.jpg](results/train/main_session/image_7_both_gen_dis.jpg)|![image_8_original_to_be_patched.jpg](results/train/main_session/image_8_original_to_be_patched.jpg)|![image_8_both_gen_dis.jpg](results/train/main_session/image_8_both_gen_dis.jpg)
-![image_9_original_to_be_patched.jpg](results/train/main_session/image_9_original_to_be_patched.jpg)|![image_9_both_gen_dis.jpg](results/train/main_session/image_9_both_gen_dis.jpg)|![image_10_original_to_be_patched.jpg](results/train/main_session/image_10_original_to_be_patched.jpg)|![image_10_both_gen_dis.jpg](results/train/main_session/image_10_both_gen_dis.jpg)|![image_11_original_to_be_patched](results/train/main_session/image_11_original_to_be_patched.jpg)|![image_11_both_gen_dis](results/train/main_session/image_11_both_gen_dis.jpg)
+![image_0_original_to_be_patched.jpg](results/validation/main_session/image_0_original_to_be_patched.jpg)|![image_0_both_gen_dis.jpg](results/validation/main_session/image_0_both_gen_dis.jpg)|![image_1_original_to_be_patched.jpg](results/validation/main_session/image_1_original_to_be_patched.jpg)|![image_1_both_gen_dis.jpg](results/validation/main_session/image_1_both_gen_dis.jpg)|![image_2_original_to_be_patched.jpg](results/validation/main_session/image_2_original_to_be_patched.jpg)|![image_2_both_gen_dis.jpg](results/validation/main_session/image_2_both_gen_dis.jpg)
+![image_3_original_to_be_patched.jpg](results/validation/main_session/image_3_original_to_be_patched.jpg)|![image_3_both_gen_dis.jpg](results/validation/main_session/image_3_both_gen_dis.jpg)|![image_4_original_to_be_patched.jpg](results/validation/main_session/image_4_original_to_be_patched.jpg)|![image_4_both_gen_dis.jpg](results/validation/main_session/image_4_both_gen_dis.jpg)|![image_5_original_to_be_patched.jpg](results/validation/main_session/image_5_original_to_be_patched.jpg)|![image_5_both_gen_dis.jpg](results/validation/main_session/image_5_both_gen_dis.jpg)
+![image_6_original_to_be_patched.jpg](results/validation/main_session/image_6_original_to_be_patched.jpg)|![image_6_both_gen_dis.jpg](results/validation/main_session/image_6_both_gen_dis.jpg)|![image_7_original_to_be_patched.jpg](results/validation/main_session/image_7_original_to_be_patched.jpg)|![image_7_both_gen_dis.jpg](results/validation/main_session/image_7_both_gen_dis.jpg)|![image_8_original_to_be_patched.jpg](results/validation/main_session/image_8_original_to_be_patched.jpg)|![image_8_both_gen_dis.jpg](results/validation/main_session/image_8_both_gen_dis.jpg)
+![image_9_original_to_be_patched.jpg](results/validation/main_session/image_9_original_to_be_patched.jpg)|![image_9_both_gen_dis.jpg](results/validation/main_session/image_9_both_gen_dis.jpg)|![image_10_original_to_be_patched.jpg](results/validation/main_session/image_10_original_to_be_patched.jpg)|![image_10_both_gen_dis.jpg](results/validation/main_session/image_10_both_gen_dis.jpg)|![image_11_original_to_be_patched](results/validation/main_session/image_11_original_to_be_patched.jpg)|![image_11_both_gen_dis](results/validation/main_session/image_11_both_gen_dis.jpg)
 
 
-**Note:** The results above are on a miniscule train dataset and these are training images only. Training on actual train data and then testing on test data is not possible on a personal laptop due to hardware inefficiency. Moreover, i just wanted to see if i was going in the right direction and if the code was working as intended or not. As a result, the model available here, on Github, doesn't work well on test images.
-      As per the authors, to get results like those in the published paper the entire training process takes around 2 months on a single machine with 4 K80 GPUs.
+**Note:** The results above are on a small subset of training data and the model hasn't been trained fully due to hardware and time constraints. And since i have used only square patches during training, the model available on GitHub works on only on square patches.  
+      By the way, to get results like those in the published paper the entire training process takes around 2 months on a single machine with 4 K80 GPUs. Additionally, some post-processing is also required to make inpainting results look authentic.
 
 ______________________________________
 
@@ -117,3 +130,4 @@ One can start one's own training session by following below instructions :
 5. Start the training process by running "python train.py" in terminal
 6. Checkoints are stored at regular intervals(interval is customizable), so training can be stopped and resumed. When training is resumed model loads the weights from the saved checkpoints, if they exist
 7. To restart the training from scratch just delete the saved_sessions, logs, results folders and run "python train.py" again
+8. To start the Tensorboard run "tensorboard --logdir=logs/" in terminal
