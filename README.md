@@ -16,7 +16,7 @@ ______________________________________
 Please go the link mentioned below for demo web service.
 
 
-<http://inpaint.online>
+[inpaint.online](http://167.99.122.4:80)
 
 ######
 Source Code for this web service can be found at below mentioned link.
