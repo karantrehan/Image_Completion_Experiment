@@ -123,9 +123,9 @@ ______________________________________
 
 One can start one's own training session by following below instructions :
 
-1. Clone the GIT repo in your local system. Repo has the data I used for training the model available on Github. **Note:** One might need to install git-lfs first as it is required for version-controlling large files, such as logs and weight checkpoints
+1. Clone the GIT repo in your local system. **Note:** One might need to install git-lfs first as it is required for version-controlling large files, such as logs and weight checkpoints
 2. Recreate the environment used while writing the code using the environment.yml file. Run command 'conda env create -f environment.yml' after installing anaconda
-3. Change the training and validation data path at line 160 and 166 in train.py. **Note:** Image files should be in a folder named 'original' inside training folder
+3. Change the training and validation data path at line 160 and 166 in train.py. **Note:** Image files should be in a folder named 'original' inside training folder. For e.g. 'data/train/original/img_1.jpg'
 4. Delete saved_sessions, results and logs directories
 5. Start the training process by running "python train.py" in terminal
 6. Checkoints are stored at regular intervals(interval is customizable), so training can be stopped and resumed. When training is resumed model loads the weights from the saved checkpoints, if they exist
