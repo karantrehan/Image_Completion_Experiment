@@ -1,5 +1,5 @@
 ###### Disclaimer:
-This is an unofficial TensorFlow (version 1.1.0) implementation of a publicly available research paper on InPainting i.e. completing images based on the surrounding pixel values.
+This is an unofficial TensorFlow (version 1.1.0) implementation of a publicly available research paper on InPainting i.e. completing images based on the surrounding pixel values. Some components of Keras also have been used.
 
 The entire code has been written by me with the sole purpose of exploration. I don't have any intention of gaining any monetary benefits, whatsoever, from it.
 
