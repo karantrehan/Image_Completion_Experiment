@@ -21,7 +21,7 @@ Please go the link mentioned below for demo web service.
 ######
 Source Code for this web service can be found at below mentioned link.
 
-<https://github.com/karantrehan/Image_Completion_Web_Service>
+<https://github.com/karantrehan/Image_Completion_Demo>
 
 
 ## Summary
@@ -104,7 +104,7 @@ ______________________________________
 #### Images Comparison
 
 
-Patched | Completed | Patched | Completed | Patched | Completed
+Input | Output | Input | Output | Input | Output
 :-------------------------:|:-------------------------:|:------------------------:|:------------------------|:------------------------:|:------------------------
 ![image_0_original_to_be_patched.jpg](results/validation/main_session/image_0_original_to_be_patched.jpg)|![image_0_both_gen_dis.jpg](results/validation/main_session/image_0_both_gen_dis.jpg)|![image_1_original_to_be_patched.jpg](results/validation/main_session/image_1_original_to_be_patched.jpg)|![image_1_both_gen_dis.jpg](results/validation/main_session/image_1_both_gen_dis.jpg)|![image_2_original_to_be_patched.jpg](results/validation/main_session/image_2_original_to_be_patched.jpg)|![image_2_both_gen_dis.jpg](results/validation/main_session/image_2_both_gen_dis.jpg)
 ![image_3_original_to_be_patched.jpg](results/validation/main_session/image_3_original_to_be_patched.jpg)|![image_3_both_gen_dis.jpg](results/validation/main_session/image_3_both_gen_dis.jpg)|![image_4_original_to_be_patched.jpg](results/validation/main_session/image_4_original_to_be_patched.jpg)|![image_4_both_gen_dis.jpg](results/validation/main_session/image_4_both_gen_dis.jpg)|![image_5_original_to_be_patched.jpg](results/validation/main_session/image_5_original_to_be_patched.jpg)|![image_5_both_gen_dis.jpg](results/validation/main_session/image_5_both_gen_dis.jpg)
