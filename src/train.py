@@ -11,6 +11,7 @@ import scipy
 import pickle
 import os
 
+# project_dir = "/usr/src/app"
 project_dir = os.getcwd()
 
 
@@ -20,13 +21,13 @@ K.set_session(sess)
 
 batch_size = 12
 batch_size_validation = 12
-learning_rate = 0.00001
+learning_rate = 0.0001
 weight_GAN = 0.04
 weight_L1 = 1
 momentum = 0.9
 
-total_no_of_iterations = 500001
-checkpoints = 500
+total_no_of_iterations = 200
+checkpoints = 40
 
 
 def pickle_dump(obj, path):
@@ -284,7 +285,7 @@ if __name__ == "__main__":
 
     # training image generator
 
-    image_batch_train = image_gen.flow_from_directory(project_dir + '/data/test_256',  # # Restore to da
+    image_batch_train = image_gen.flow_from_directory(project_dir + '/data/my_places_train',  # # Restore to da
                                                       batch_size=batch_size,
                                                       target_size=(256, 256), shuffle=False)
 
@@ -301,9 +302,9 @@ if __name__ == "__main__":
 
     # Restoring the main Session if it exists
 
-    if os.path.isfile(project_dir + '/' + 'saved_sessions/' + loss_dir_name + '/session.index'):
-        saver.restore(sess, project_dir + '/' + 'saved_sessions/' + loss_dir_name + '/session')
-        pickle_in = open(project_dir + '/' + 'saved_sessions/' + loss_dir_name + '/curr_iteration.pickle', 'rb')
+    if os.path.isfile(project_dir + '/' + 'saved_sessions_new/' + loss_dir_name + '/session.index'):
+        saver.restore(sess, project_dir + '/' + 'saved_sessions_new/' + loss_dir_name + '/session')
+        pickle_in = open(project_dir + '/' + 'saved_sessions_new/' + loss_dir_name + '/curr_iteration.pickle', 'rb')
         curr_iteration = pickle.load(pickle_in)
         curr_iteration = curr_iteration + 1
 
@@ -322,7 +323,7 @@ if __name__ == "__main__":
 
             # Training Generator Network using L1 loss
 
-            if i < 75001:
+            if i < 100:
                 print('Training only Generator with Euclidean Loss -', ' iter:', i, ' lr: ', learning_rate, ' wt_L1: ', weight_L1, ' wt_GAN: ', weight_GAN, ' batch_size: ', batch_size, ' momentum: ', momentum, sep='')
                 h = np.random.randint(64, 128)
                 w = np.random.randint(64, 128)
@@ -428,7 +429,7 @@ if __name__ == "__main__":
 
             # Training Discriminator Network using Cross Entropy loss
 
-            elif 75001 <= i < 110001:
+            elif 100 <= i < 140:
 
                 print('Training only Discriminator with Cross Entropy Loss -', ' iter:', i, ' lr: ', learning_rate, ' wt_L1: ', weight_L1, ' wt_GAN: ', weight_GAN, ' batch_size: ', batch_size, ' momentum: ', momentum, sep='')
                 h = np.random.randint(64, 128)
@@ -480,7 +481,7 @@ if __name__ == "__main__":
 
             #  Training Generator Network using L1 and GAN loss and Discriminator Network using Cross Entropy loss
 
-            elif 110001 <= i < total_no_of_iterations:
+            elif 141 <= i < total_no_of_iterations:
 
                 print('Training both Gen, Dis -', ' iter:', i, ' lr: ', learning_rate, ' wt_L1: ', weight_L1, ' wt_GAN: ', weight_GAN, ' batch_size: ', batch_size, ' momentum: ', momentum, sep='')
                 h = np.random.randint(64, 128)
@@ -540,12 +541,12 @@ if __name__ == "__main__":
 
             if i % checkpoints == 0:
 
-                if os.path.isdir(project_dir + '/' + 'saved_sessions/' + loss_dir_name) is False:
-                    os.makedirs(project_dir + '/' + 'saved_sessions/' + loss_dir_name)
+                if os.path.isdir(project_dir + '/' + 'saved_sessions_new/' + loss_dir_name) is False:
+                    os.makedirs(project_dir + '/' + 'saved_sessions_new/' + loss_dir_name)
 
                 print('Saving checkpoints...')
-                saver.save(sess, project_dir + '/' + 'saved_sessions/' + loss_dir_name + '/session')  # # Saving Session
-                pickle_out = open(project_dir + '/' + 'saved_sessions/' + loss_dir_name + '/curr_iteration.pickle', 'wb')
+                saver.save(sess, project_dir + '/' + 'saved_sessions_new/' + loss_dir_name + '/session')  # # Saving Session
+                pickle_out = open(project_dir + '/' + 'saved_sessions_new/' + loss_dir_name + '/curr_iteration.pickle', 'wb')
                 pickle.dump(curr_iteration, pickle_out)
                 pickle_out.close()
 
