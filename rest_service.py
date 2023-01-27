@@ -13,8 +13,8 @@ import cv2
 import os
 print(os.getcwd())
 
-project_dir = '/usr/src/app'
-# project_dir = os.getcwd()
+project_dir = os.getcwd()
+print(project_dir)
 
 sess = tf.Session()
 K.set_session(sess)
@@ -100,21 +100,16 @@ def stringToImage(base64_string):
 
 @app.route('/scan/api', methods=['POST'])
 def get_inpainted_image():
+    image = plt.imread(request.files['image'])
+    mask = plt.imread(request.files['mask'])
 
-    # data = request.get_json(force=True)
-    #
-    # img = stringToImage(data.get('file'))
-    #
-    # im = np.array(img)
-
-    mask = plt.imread(project_dir+'/data/custom_data/original/mask.png')
+    # mask = plt.imread(project_dir+'/data/custom_data/original/mask.png')
+    mask = mask[:, :, 0:3]
+    image = image[:, :, 0:3]
     # image = plt.imread(os.getcwd()+'/data/custom_data/original/image.png')
 
-    image = plt.imread(request.files['image'])
-
-
-    image = cv2.resize(image, (256,256))
-    mask = cv2.resize(mask, (256,256))
+    image = cv2.resize(image, (256, 256))
+    mask = cv2.resize(mask, (256, 256))
 
     image= np.expand_dims(image,0)
     mask = np.expand_dims(mask, 0)
